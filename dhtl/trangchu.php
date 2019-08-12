@@ -1,88 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Khoa công nghệ thông tin</title>
 	<!-- Thư viện css -->
-	<!-- Thư viện css -->
-	<link rel="stylesheet" href="../../admin/public/templates/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../../admin/public/templates/css/StyleCus.css">
-	<link rel="stylesheet" href="../../admin/public/templates/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../admin/public/templates/css/bootstrap.min.css"/>	
+	<link rel="stylesheet" href="../admin/public/templates/css/style.css"/>
+	<link rel="stylesheet" href="../admin/public/templates/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../admin/public/templates/css/aos.css"/>
 	<!-- Thư viện js -->
-	<script src="../../admin/public/templates/js/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="../../admin/public/templates/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="../admin/public/templates/js/bootstrap.min.js"></script>
+	<script src="../admin/public/templates/js/aos.js"></script>
 </head>
-
 <body>
-	<!-- Top_Header -->
-	<?php include 'top_header.php'; ?>
-	<!-- End Top_Header -->
-
-	<!-- Header_Menu -->
-	<?php include 'menu_header.php'; ?>
-	<!-- End Header_Menu -->
-
-	<!-- Carousel Fixed Height -->
-	<?php include 'nivo_slider.php'; ?>
-	<!-- /end Carousel Fixed Height -->
-	<!-- MAIN -->
-	<section class="container">
-		<section class="row">
-			<div class="top_main">
-				<h3>Khoa Công Nghệ Thông Tin </h3>
+<!-- Top_Header -->
+	<div class="container-fluid topHeader">
+		<div class="container">
+			<div class="row header_top">
+				<div class="label">
+					<a href="http://www.tlu.edu.vn/">Trường Đại học Thủy Lợi - TLU</a>
+				</div>
+				<div class="list-top">
+					<ul>
+						<li><a href="#" title="Login">(+)  Login</a></li>
+						<li><a href="#" title="Register">Register</a></li>
+						<li class="ngonNgu">
+							Ngôn ngữ :
+							<a href=""><img src="http://cse.tlu.edu.vn/cse/assets/images/icons/icon-lang-vi.png" alt=""></a>
+							<a href="#" style="padding-left: 5px;"><img src="http://cse.tlu.edu.vn/cse/assets/images/icons/icon-lang-en.png" alt="" style="padding-left: 0;" ></a>
+						</li>
+						<div class="search-top">
+							<input type="text" placeholder="Tìm Kiếm" id="search" name="search">
+							<button style="color: black ">Search</button>						
+						</div>
+					</ul>
+				</div>
 			</div>
-		</section>
+		</div>
+	</div>
+<!-- End Top_Header -->
+
+<!-- Header_Menu -->
+	<div class="container-fluid"  >
+		<div class="container">
+			<div class="row">
+				<div class="header">
+					<img src="http://cse.tlu.edu.vn/cse/assets/images/logo.jpg" alt="">
+					<nav >
+						<ul class="navBar">
+							<li><a href="#" title="TRANG CHỦ">TRANG CHỦ</a></li>
+							<li>
+								<a href="#" title="GIỚI THIỆU">GIỚI THIỆU</a>
+								<ul class="sub_menu">
+									<li><a href="#" title="Logo Khoa CNTT">Logo Khoa CNTT</a></li>
+									<li><a href="#" title="Lời chào mừng">Lời chào mừng</a></li>
+									<li><a href="#" title="Tổ chức">Tổ chức</a></li>
+									<li><a href="#" title="Hợp tác liên kết">Hợp tác liên kết</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" title="NGHIÊN CỨU KHOA HỌC"> KHOA HỌC</a>
+								<ul class="sub_menu">
+									<li><a href="#" title="Các đề tài, dự án">Các đề tài, dự án</a></li>
+									<li><a href="#" title="Thông tin Seminar">Thông tin Seminar</a></li>
+									<li><a href="#" title="Công trình công bố">Công trình công bố</a></li>
+									<li><a href="#" title="Các phòng nghiệm">Các phòng nghiệm</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" title="ĐÀO TẠO">
+								ĐÀO TẠO
+								</a>
+								<ul class="sub_menu">
+									<li><a href="#" title="Đào tạo đại học">Đào tạo đại học</a></li>
+									<li><a href="#" title="Đào tạo sau đại học">Đào tạo sau đại học</a></li>
+									<li><a href="#" title="Chuẩn đầu ra">Chuẩn đầu ra</a></li>
+									<li><a href="#" title="Định hướng nghành">Định hướng nghành </a></li>
+									<li><a href="#" title="Mô hình đào tạo">Mô hình đào tạo</a></li>
+									<li><a href="#" title="Đề cương môn học">Đề cương môn học</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" title="BỘ MÔN - TRUNG TÂM">BỘ MÔN</a>
+								<ul class="sub_menu">
+									<li><a href="#" title="Công nghệ phần mềm">Công nghệ PM</a></li>
+									<li><a href="#" title="Hệ thống thông tin">Hệ thống thông tin</a></li>
+									<li><a href="#" title="Khoa học máy tính">Khoa học máy tính</a></li>
+									<li><a href="#" title="Toán học">Toán học</a></li>
+									<li><a href="#" title="Trung tâm tin học">Trung tâm tin học</a></li>
+									<li><a href="#" title="Kỹ thuật máy tính">Kỹ thuật máy tính</a></li>
+									<li><a href="#" title="Kỹ thuật mạng">Kỹ thuật mạng</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" title="SINH VIÊN">SINH VIÊN</a>
+								<ul class="sub_menu">
+									<li><a href="#" title="Tài liệu sinh viên">Tài liệu sinh viên</a></li>
+									<li><a href="#" title="Tổ tư vấn học tập">Tổ tư vấn học tập</a></li>
+									<li><a href="#" title="Biểu mẫu Đồ án tốt nghiệp">Biểu mẫu DATN</a></li>
+									<li><a href="#" title="Luận văn tốt nghiệp">Luận văn tốt nghiệp</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" title="TIN TỨC">TIN TỨC</a>
+								<ul class="sub_menu">
+									<li><a href="#" title="Sự kiện">Sự kiện</a></li>
+									<li><a href="#" title="CSE trên báo">CSE trên báo</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" title="THÔNG BÁO">THÔNG BÁO</a>
+								<ul class="sub_menu">
+									<li><a href="#" title="Thông báo">Thông báo</a></li>
+									<li><a href="#" title="Thông báo đào tạo">Thông báo đào tạo</a></li>
+									<li><a href="#" title="Nghiên cứu khoa học">Nghiên cứu KH</a></li>
+									<li><a href="#" title="Tuyển dụng">Tuyển dụng</a></li>
+									<li><a href="#" title="Học bổng">Học bổng</a></li>
+									<li><a href="#" title="Thông tin khác">Thông tin khác</a></li>
+								</ul>
+							</li>
+							<li><a href="#" title="LIÊN HỆ">LIÊN HỆ</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- End Header_Menu -->
+
+<!-- Carousel Fixed Height -->
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		  </ol>
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img class="d-block w-100" src="http://cse.tlu.edu.vn/Portals/0/Banner/bannertq4.jpg" alt="First slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100" src="http://cse.tlu.edu.vn/Portals/0/Banners/trao-doi.jpg" alt="Second slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100" src="http://cse.tlu.edu.vn/Portals/0/Banner/khai-truong.JPG" alt="Third slide">
+		    </div>
+		  </div>
+		</div>
+	
+<!-- /end Carousel Fixed Height -->
+<!-- MAIN -->
+	<section class="container">
+	  	<section class="row">
+	  		<div class="col-md-12 col-xs-12 top_main">
+	  			<h3>TIN HOẠT ĐỘNG</h3>
+	  		</div>
+	  	</section>
 	</section>
 	<section class="container">
 		<section class="row">
-			<div class="col-md-3 col-xs-12 main_row1">
-				<a href=""><img src="http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg" alt=""></a>
-				<a href="" style="margin:10px 30%;">Lời Chào Mừng</a>
-				<p>Xin chào các cô giáo, thầy giáo, anh chị và các bạn ghé thăm trang web của Khoa CNTT!...</p>
+			<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-right">
+				<a href=""><img src="http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg" alt=""></a>	
+				<a href="" >Hội thảo "Sử dụng mạng xã hội an toàn - góc nhìn từ tiêu chuẩn cộng đồng facebook"</a>				
 				<i>02 tháng 08, 2019</i>
 			</div>
-			<div class="col-md-3 col-xs-12 main_row1">
+			<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-up">
 				<a href=""><img src="http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg" alt=""></a>
-				<a href="" style="margin:10px 30%;">Giảng Viên</a>
-				<p>Chương trình đào tạo Tài năng Toán Tin dành cho những sinh viên ưu tú, đam mê toán và/hoặc tin...</p>
+				<a href="" >"Xét kết quả nghiên cứu khoa học của sinh viên toàn quốc lần thứ 32  . . . . "</a>
 				<i>02 tháng 08, 2019</i>
 			</div>
-			<div class="col-md-3 col-xs-12 main_row1">
+			<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1"  data-aos="fade-down">
 				<a href=""><img src="http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg" alt=""></a>
-				<a href="" style="margin:10px 20%;">Nghiên Cứu Khoa Học</a>
-				<p>Chương trình đào tạo Tài năng Toán Tin dành cho những sinh viên ưu tú, đam mê toán và/hoặc tin...</p>
+				<a href="" >Thông báo tuyển sinh đào tạo trình độ thạc sĩ đợt 1 năm 2019 của trường Thủy Lợi</a>	
 				<i>02 tháng 08, 2019</i>
 			</div>
-			<div class="col-md-3 col-xs-12 main_row1">
+			<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-left">
 				<a href=""><img src="http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg" alt=""></a>
-				<a href="" style="margin:10px 30%;">Đào tạo</a>
-				<p>Chương trình đào tạo Tài năng Toán Tin dành cho những sinh viên ưu tú, đam mê toán và/hoặc tin...</p>
+				<a href="" >Hội thảo "Sử dụng mạng xã hội an toàn - góc nhìn từ tiêu chuẩn cộng đồng facebook"</a>	
 				<i>02 tháng 08, 2019</i>
 			</div>
 		</section>
 		<section class="row">
 			<div class="col-md-12 col-xs-12 main_row2">
-				<a href="">CÁC NGHÀNH ĐÀO TẠO CÔNG NGHỆ MỚI</a>
+				<h3>SỰ KIỆN</h3>
 			</div>
 		</section>
 		<section class="row">
-			<div class="col-md-3 col-md-12 main_row3">
-				<a href=""><img src="https://ts.hust.edu.vn/documents/100477/121148/nganh-1.png/1293fee9-7c10-40e9-8ef5-fcb528995f94?t=1555564867659" alt=""></a>
+			<div class="col-md-8 col-xs-6 main_row3">
+				<div class="main_row3_1" data-aos="fade-down" data-aos-duration="4500">
+					<img src="http://www.tlu.edu.vn/Portals/0/2018/Thang11/3_2.jpg" alt="">
+					<div class="main_row3_right">
+						<a href=""><b>3 trong 4 sinh viên Trường Đại học Thủy lợi đạt giải tại Olympic Tin học toàn quốc là tân sinh viên Khóa 60</b></a>
+						<a href=""><i>Xem Thêm...</i></a>
+					</div>
+					
+				</div>
+				<div class="main_row3_1" data-aos="fade-up" data-aos-duration="4000">
+					<img src="http://www.tlu.edu.vn/Portals/0/2018/Thang11/TH_2.jpg" alt="">
+					<div class="main_row3_right">
+						<a href=""><b>Đội tuyển Olympic Tin học toàn quốc ra quân (TLU) <br>
+					    “Với thời gian ôn luyện gấp rút trong 2 tháng cùng việc xét chọn kỹ lưỡng qua các bài kiểm tra, đội tuyển Olympic Tin học ...</b></a>
+						<a href=""><i>Xem Thêm...</i></a>
+					</div>
+					
+				</div>
+				<div class="main_row3_1" data-aos="fade-up" data-aos-duration="5500">
+					<img src="http://www.tlu.edu.vn/Portals/0/2018/Thang11/C.jpg" alt="">
+					<div class="main_row3_right">
+						<a href=""><b>Công bố Quyết định thành lập Đảng bộ bộ phận Công nghệ thông tin <br>
+						(TLU) – Sáng ngày 15/11, tại P225/A2 diễn ra lễ công bố ...</b></a>
+						<a href=""><i>Xem Thêm...</i></a>
+					</div>
+					
+				</div>
 			</div>
-			<div class="col-md-3 col-md-12 main_row3">
-				<a href=""><img src="https://ts.hust.edu.vn/documents/100477/121148/nganh-2.png/bfd5a398-8747-4e03-ac70-dba73920f63f?t=1555565150451" alt=""></a>
-			</div>
-			<div class="col-md-3 col-md-12 main_row3">
-				<a href=""><img src="https://ts.hust.edu.vn/documents/100477/144745/elitech.png/f9a11855-8b57-432b-8159-ff5276d7b350?t=1564652789395" alt=""></a>
-			</div>
-			<div class="col-md-3 col-md-12 main_row3">
+			
+			<div class="col-md-4 col-xs-6 main_row3">
 				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcse.tlu.edu.vn%2F&tabs&width=292&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="292" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 			</div>
+			<!-- <div class="col-md-3 col-md-12 main_row3">
+				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcse.tlu.edu.vn%2F&tabs&width=292&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="292" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+			</div> -->
 		</section>
 	</section>
-	<!-- End Main  -->
+<!-- End Main  -->
 	<section class="container-fluid footer">
 		<section class="container">
 			<section class="row">
@@ -130,12 +273,13 @@
 						© 2017 Khoa Công nghệ thông tin - Đại học Thủy lợi <br>
 						Địa chỉ: nhà C1, Đại học Thủy lợi, 175 Tây Sơn, Đống Đa, Hà Nội. Điện thoại: (+84)-024 3 5632211. Email: vpkcntt@tlu.edu.vn
 					</p>
-
+					
 				</div>
 			</section>
 		</section>
 	</section>
-
+ <script>
+  AOS.init();
+</script>
 </body>
-
 </html>
