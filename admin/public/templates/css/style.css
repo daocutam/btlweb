@@ -50,9 +50,7 @@ body{
 }
 
 /*Navbar*/
-.container-fluid{
-	border-bottom: 1px solid #3366ff;
-}
+
 .header{
 	margin-top: 30px;
 	margin-bottom: 2px;
@@ -132,6 +130,7 @@ body{
 }
 .main_row1 img{
 	width: 100%;
+	height: 255px;
 	border-radius: 10px;
 }
 .main_row1 a{
@@ -159,6 +158,7 @@ body{
 }
 .main_row3 img{
 	width: 150px;
+	height:150px;
 	border-radius: 5px;
 	margin-top: 10px;
 }
@@ -207,4 +207,8 @@ body{
 	margin-left: 20px;
 	margin-top: 10px;
 	font-size: 12px;
+}
+
+#carouselExampleIndicators img{
+	height: 480px;
 }
