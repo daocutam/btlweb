@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid" style=" border-bottom:1px solid #0c0fea">
     <div class="container">
         <div class="row">
-            <div class="header">
+            <div class="header" >
                 <img src="http://cse.tlu.edu.vn/cse/assets/images/logo.jpg" alt="">
                 <nav>
                     <ul class="navBar">

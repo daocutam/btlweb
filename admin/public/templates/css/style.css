@@ -212,3 +212,46 @@ body{
 #carouselExampleIndicators img{
 	height: 480px;
 }
+.main_logo{
+	background-color: #012f7c;
+	height: 30px;
+	margin-top: 40px;
+	border-radius: 5px;
+}
+.menu_main_logo {
+	display: flex;
+	line-height: 30px;
+}
+.menu_main_logo a,img{
+	font-size: 16px;
+	margin-left: 20px;
+}
+.logo{
+	margin-top: 30px;
+}
+.logo_img{
+	display: flex;
+}
+.logo_img img{
+	width: 200px;
+	height: 200px;
+}
+.logo a{
+	text-decoration: underline;
+	color: black;
+	float: right;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.chao_mung p{
+	font-size: 20px;
+}
+.chao_mung i{
+	font-weight: bold;
+}
+.chao_mung a{
+	font-size: 20px;
+	color: #0c0fea;
+	margin-left: 80px;
+	text-decoration: underline;
+}

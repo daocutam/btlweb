@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-12 col-xs-12" style="border-top:1px solid #012f7c;">
+        <div class="col-md-12 col-xs-12" >
             <!-- Carousel Fixed Height -->
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
