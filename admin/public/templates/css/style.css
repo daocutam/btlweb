@@ -11,8 +11,8 @@ body{
 	z-index: 999;
 }
 .header_top{
-	display: flex;
-	padding-left: 200px;
+	display: flex ;
+	padding-left: 150px;
 	line-height: 17px;
 }
 .list-top ul,a{
