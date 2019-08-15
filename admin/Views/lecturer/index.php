@@ -1,6 +1,6 @@
 <?php
 include("../../configDb.php");
-$sql = "SELECT id,name FROM branch";
+$sql = "SELECT id,name FROM branch where active = 1";
 $arr = $conn->query($sql);
 $_lvarr = array('Tiến sĩ', 'Thạc sĩ', 'Giáo sư');
 ?>

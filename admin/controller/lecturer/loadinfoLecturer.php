@@ -1,9 +1,9 @@
 <?php
 
 include('../../configDb.php');
-$sql = "SELECT id,name FROM branch";
+$sql = "SELECT id,name FROM branch where active = 1";
 $arr = $conn->query($sql);
-$_lvarr = array('Thac si', 'Tien si', 'Giao su');
+$_lvarr = array('Thạc sĩ', 'Tiến sĩ', 'Giáo sư');
 $branch_html = "";
 $level_html = "";
 if (isset($_POST['id'])) {
@@ -44,7 +44,7 @@ if (isset($_POST['id'])) {
                                 <label>Bộ môn</label>
                                 <input type="hidden" name="_id" value="' . $row['id'] . '"/>
                                 <select class="form-control" id="_p_branchList" name="_branch_id">
-                                    ' . $branch_html . '
+                                    "' . $branch_html . '"
                                 </select>
                             </div>
                         </div>
@@ -52,7 +52,7 @@ if (isset($_POST['id'])) {
                             <div class="col-md-12 col-sm-12 col-12">
                                 <label>Học vị</label>
                                 <select class="form-control" id="_p_level" name="_level">
-                                    ' . $level_html . '
+                                    "' . $level_html . '"
                                 </select>
                             </div>
                         </div>
@@ -89,7 +89,7 @@ if (isset($_POST['id'])) {
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-12">
                                 <label>Giới thiệu</label>
-                                <textarea class="form-control" id="_introduct" name="_introduct" placeholder="Nội dung">"' . $row['introduct'] . '"</textarea>
+                                <textarea class="form-control" id="_introduct" name="_introduct" placeholder="Nội dung">' . $row['introduct'] . '</textarea>
                             </div>
                         </div>
                         <div class="row pb-2">

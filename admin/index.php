@@ -11,7 +11,6 @@
     <link href="public/templates/css/main.css" rel="stylesheet">
     <link href="public/templates/css/chatapp.css" rel="stylesheet">
     <link href="public/templates/css/color_skins.css" rel="stylesheet">
-    <link href="public/templates/css/style.css" rel="stylesheet">
     <link href="public/templates/css/jquery-ui.css" rel="stylesheet">
     <script src="public/templates/js/bootstrap.min.js"></script>
     <script src="public/templates/js/respond.js"></script>
@@ -24,6 +23,7 @@
     <script src="public/templates/js/jquery-ui.js"></script>
     <script src="public/templates/js/jquery.validate.min.js"></script>
     <script src="public/templates/js/ajax.js"></script>
+    <link href="public/templates/css/style.css" rel="stylesheet">
 </head>
 
 <body class="theme-orange">
