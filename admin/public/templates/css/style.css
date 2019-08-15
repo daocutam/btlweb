@@ -212,3 +212,11 @@ body{
 #carouselExampleIndicators img{
 	height: 480px;
 }
+
+.table thead{
+	color: black !important;
+}
+
+.table tbody tr td, .table tbody th td {
+	white-space:normal !important;
+}

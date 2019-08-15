@@ -50,7 +50,7 @@ function createBranch() {
         submitHandler: function () {
             $.ajax({
                 type: 'POST',
-                url: '../../../admin/controller/branch/createBranch.php',
+                url: '../../../../btlweb/admin/controller/branch/createBranch.php',
                 data: $("#frmcreateBranch").serialize(),
                 success: function (result) {
                     if (result == 1) {
@@ -73,7 +73,7 @@ function loadListBranch() {
     var name = $.trim($('#txtnameBranch').val());
     var phone = $.trim($('#txtphoneBranch').val());
     $.ajax({
-        url: '../../admin/controller/branch/loadListBranch.php',
+        url: '../../../../btlweb/admin/controller/branch/loadListBranch.php',
         type: 'POST',
         data: { name: name, phone: phone },
         success: function (result) {
@@ -86,7 +86,7 @@ function loadListBranch() {
 function loadinfoBranch($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/branch/loadinfoBranch.php',
+        url: '../../../../btlweb/admin/controller/branch/loadinfoBranch.php',
         data: { id: $id },
         success: function (result) {
             $('#_popupEditBranch').html(result);
@@ -154,7 +154,7 @@ function saveEditBranch() {
         },
         submitHandler: function () {
             $.ajax({
-                url: '../../admin/controller/branch/saveEditBranch.php',
+                url: '../../../../btlweb/admin/controller/branch/saveEditBranch.php',
                 type: 'POST',
                 data: $('#frmeditBranch').serialize(),
                 success: function (result) {
@@ -176,7 +176,7 @@ function saveEditBranch() {
 function deleteBranch($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/branch/deleteBranch.php',
+        url: '../../../../btlweb/admin/controller/branch/deleteBranch.php',
         data: { id: $id },
         success: function (result) {
             if (result == 1) {
@@ -201,6 +201,7 @@ function resetTextLecturer() {
     $('#file').val("");
 }
 
+
 function loadListLecturer() {
     $name = $.trim($('#txtnameLecturer').val());
     $phone = $.trim($('#txtphoneLecturer').val());
@@ -208,7 +209,7 @@ function loadListLecturer() {
     $branchList = $.trim($('#branchList').val());
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/lecturer/loadListLecturer.php',
+        url: '../../../../btlweb/admin/controller/lecturer/loadListLecturer.php',
         data: {
             name: $name,
             phone: $phone,
@@ -275,7 +276,7 @@ function createLecturer() {
                 type: "POST",
                 contentType: false,
                 processData: false,
-                url: '../../admin/controller/lecturer/createLecturer.php',
+                url: '../../../../btlweb/admin/controller/lecturer/createLecturer.php',
                 data: new FormData($('#frmcreateLecturer')[0]),
                 success: function (result) {
                     if (result == 1) {
@@ -296,7 +297,7 @@ function createLecturer() {
 function loadinfoLecturer($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/lecturer/loadinfoLecturer.php',
+        url: '../../../../btlweb/admin/controller/lecturer/loadinfoLecturer.php',
         data: { id: $id },
         success: function (result) {
             $('#_popupEditLecturer').html(result);
@@ -361,7 +362,7 @@ function saveEditLecturer() {
         },
         submitHandler: function () {
             $.ajax({
-                url: '../../admin/controller/lecturer/saveEditLecturer.php',
+                url: '../../../../btlweb/admin/controller/lecturer/saveEditLecturer.php',
                 type: 'POST',
                 contentType: false,
                 processData: false,
@@ -384,7 +385,7 @@ function saveEditLecturer() {
 function deleteLecturer($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/lecturer/deleteLecturer.php',
+        url: '../../../../btlweb/admin/controller/lecturer/deleteLecturer.php',
         data: { id: $id },
         success: function (result) {
             if (result == 1) {
@@ -402,7 +403,7 @@ function loadListNews() {
     $title = $.trim($('#txtTitle').val());
     $branch_id = $.trim($('#_branchList').val());
     $.ajax({
-        url: '../../admin/controller/news/loadListNews.php',
+        url: '../../../../btlweb/admin/controller/news/loadListNews.php',
         type: 'POST',
         data: { title: $title, branch_id: $branch_id },
         success: function (result) {
@@ -439,7 +440,7 @@ function createNews() {
                 type: 'POST',
                 contentType: false,
                 processData: false,
-                url: '../../../admin/controller/news/createNews.php',
+                url: '../../../../btlweb/admin/controller/news/createNews.php',
                 data: new FormData($("#frmcreateNews")[0]),
                 success: function (result) {
                     if (result == 1) {
@@ -460,7 +461,7 @@ function createNews() {
 function loadinfoNews($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/news/loadinfoNews.php',
+        url: '../../../../btlweb/admin/controller/news/loadinfoNews.php',
         data: { id: $id },
         success: function (result) {
             $('#_popupEditNews').html(result);
@@ -496,7 +497,7 @@ function saveEditNews() {
                 type: 'POST',
                 contentType: false,
                 processData: false,
-                url: '../../../admin/controller/news/saveEditNews.php',
+                url: '../../../../btlweb/admin/controller/news/saveEditNews.php',
                 data: new FormData($("#frmeditNews")[0]),
                 success: function (result) {
                     if (result == 1) {
@@ -517,7 +518,7 @@ function saveEditNews() {
 function deleteNews($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/news/deleteNews.php',
+        url: '../../../../btlweb/admin/controller/news/deleteNews.php',
         data: { id: $id },
         success: function (result) {
             if (result == 1) {
@@ -535,7 +536,7 @@ function loadListDocument() {
     $name = $.trim($('#txtnameDocument').val());
     $branch_id = $.trim($('#_branchListDoc').val());
     $.ajax({
-        url: '../../admin/controller/document/loadListDocument.php',
+        url: '../../../../btlweb/admin/controller/document/loadListDocument.php',
         type: 'POST',
         data: { name: $name, branch_id: $branch_id },
         success: function (result) {
@@ -576,7 +577,7 @@ function createDocument() {
                 type: 'POST',
                 processData: false,
                 contentType: false,
-                url: '../../../admin/controller/document/createDocument.php',
+                url: '../../../../btlweb/admin/controller/document/createDocument.php',
                 data: new FormData($('#frmcreateDocument')[0]),
                 success: function (result) {
                     if (result == 1) {
@@ -600,7 +601,7 @@ function openModalDocument($id) {
 function loadinfoDocument($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/document/loadinfoDocument.php',
+        url: '../../../../btlweb/admin/controller/document/loadinfoDocument.php',
         data: { id: $id },
         success: function (result) {
             $('#_popupEditDocument').html(result);
@@ -635,7 +636,7 @@ function saveEditDocument() {
         submitHandler: function () {
             $.ajax({
                 type: 'POST',
-                url: '../../../admin/controller/document/saveEditDocument.php',
+                url: '../../../../btlweb/admin/controller/document/saveEditDocument.php',
                 data: { name: name, link: link, branch_id: branch_id, image: image, id: id },
                 success: function (result) {
                     if (result == 1) {
@@ -656,7 +657,7 @@ function saveEditDocument() {
 function deleteDocument($id) {
     $.ajax({
         type: 'POST',
-        url: '../../../admin/controller/document/deleteDocument.php',
+        url: '../../../../btlweb/admin/controller/document/deleteDocument.php',
         data: { id: $id },
         success: function (result) {
             if (result == 1) {
@@ -679,7 +680,7 @@ function loadListArticle() {
     var title = $('#txttitleArticle').val();
     var lecturer_id = $('#lecturer').val();
     $.ajax({
-        url: '../../admin/controller/article/loadListArticle.php',
+        url: '../../../../btlweb/admin/controller/article/loadListArticle.php',
         type: 'POST',
         data: { title: title, lecturer_id: lecturer_id },
         success: function (result) {
@@ -711,7 +712,7 @@ function createArticle() {
                 type: 'POST',
                 contentType: false,
                 processData: false,
-                url: '../../../admin/controller/article/createArticle.php',
+                url: '../../../../btlweb/admin/controller/article/createArticle.php',
                 data: new FormData($("#frmcreateArticle")[0]),
                 success: function (result) {
                     if (result == 1) {
@@ -736,7 +737,7 @@ function openModalArticle($id) {
 function loadinfoArticle($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/article/loadinfoArticle.php',
+        url: '../../../../btlweb/admin/controller/article/loadinfoArticle.php',
         data: { id: $id },
         success: function (result) {
             $('#_popupEditArticle').html(result);
@@ -749,7 +750,7 @@ function loadinfoArticle($id) {
 function deleteArticle($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/article/deleteArticle.php',
+        url: '../../../../btlweb/admin/controller/article/deleteArticle.php',
         data: { id: $id },
         success: function (result) {
             if (result == 1) {
@@ -767,7 +768,7 @@ function deleteArticle($id) {
 function loadListAccount() {
     $name = $.trim($('#txtnameAccount').val());
     $.ajax({
-        url: '../../admin/controller/account/loadListAccount.php',
+        url: '../../../../btlweb/admin/controller/account/loadListAccount.php',
         type: 'POST',
         data: { name: $name },
         success: function (result) {
@@ -818,7 +819,7 @@ function createAccount() {
         submitHandler: function () {
             $.ajax({
                 type: 'POST',
-                url: '../../../admin/controller/account/createAccount.php',
+                url: '../../../../btlweb/admin/controller/account/createAccount.php',
                 data: $("#frmcreateAccount").serialize(),
                 success: function (result) {
                     if (result == 1) {
@@ -843,7 +844,7 @@ function openModalAccount($id) {
 function loadinfoAccount($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/account/loadinfoAccount.php',
+        url: '../../../../btlweb/admin/controller/account/loadinfoAccount.php',
         data: { id: $id },
         success: function (result) {
             $('#_popupEditAccount').html(result);
@@ -887,7 +888,7 @@ function saveEditAccount() {
         submitHandler: function () {
             $.ajax({
                 type: 'POST',
-                url: '../../../admin/controller/account/saveEditAccount.php',
+                url: '../../../../btlweb/admin/controller/account/saveEditAccount.php',
                 data: $("#frmeditAccount").serialize(),
                 success: function (result) {
                     if (result == 1) {
@@ -907,7 +908,7 @@ function saveEditAccount() {
 function deleteAccount($id) {
     $.ajax({
         type: 'POST',
-        url: '../../admin/controller/account/deleteAccount.php',
+        url: '../../../../btlweb/admin/controller/account/deleteAccount.php',
         data: { id: $id },
         success: function (result) {
             if (result == 1) {
@@ -924,7 +925,7 @@ function deleteAccount($id) {
 function redirectBranch() {
     $.ajax({
         type: 'GET',
-        url: '../../../admin/controller/branch/redirectIndex.php',
+        url: '../../../../btlweb/admin/controller/branch/redirectIndex.php',
         success: function (result) {
             $('#index').html(result);
             loadListBranch();
@@ -935,7 +936,7 @@ function redirectBranch() {
 function redirectLecturer() {
     $.ajax({
         type: 'GET',
-        url: '../../../admin/controller/lecturer/redirectIndex.php',
+        url: '../../../../btlweb/admin/controller/lecturer/redirectIndex.php',
         success: function (result) {
             $('#index').html(result);
             loadListLecturer();
@@ -948,7 +949,7 @@ function redirectLecturer() {
 function redirectNews() {
     $.ajax({
         type: 'GET',
-        url: '../../../admin/controller/news/redirectIndex.php',
+        url: '../../../../btlweb/admin/controller/news/redirectIndex.php',
         success: function (result) {
             $('#index').html(result);
             loadListNews();
@@ -960,7 +961,7 @@ function redirectNews() {
 function redirectDocument() {
     $.ajax({
         type: 'GET',
-        url: '../../../admin/controller/document/redirectIndex.php',
+        url: '../../../../btlweb/admin/controller/document/redirectIndex.php',
         success: function (result) {
             $('#index').html(result);
             loadListDocument();
@@ -972,7 +973,7 @@ function redirectDocument() {
 function redirectArticle() {
     $.ajax({
         type: 'GET',
-        url: '../../../admin/controller/article/redirectIndex.php',
+        url: '../../../../btlweb/admin/controller/article/redirectIndex.php',
         success: function (result) {
             $('#index').html(result);
             loadListArticle();
@@ -985,7 +986,7 @@ function redirectAccount() {
     $url = 'account.php'
     $.ajax({
         type: 'GET',
-        url: '../../../admin/controller/account/redirectIndex.php',
+        url: '../../../../btlweb/admin/controller/account/redirectIndex.php',
         data: { account: $url },
         success: function (result) {
             $('#index').html(result);

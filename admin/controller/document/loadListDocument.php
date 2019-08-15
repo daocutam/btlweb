@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
         <td>" . $row["code"] . "</td>
         <td>" . $row["name"] . "</td>
         <td>" . $row["link"] . "</td>
-        <td><img src='../../../admin/Images/" . $row["image"] . "' width='120' height='160'  /></td>
+        <td><img src='../../../../btlweb/admin/Images/" . $row["image"] . "' width='120' height='160'  /></td>
         <td>" . $created . "</td>
         <td><a onclick = 'openModalDocument(" . $row['id'] . ")' data-toggle = 'tooltip' data-placement='top' title='Sửa' class='cursor-pointer'>
             <i class='btnEdit fa fa-fw fa-edit'></i>
