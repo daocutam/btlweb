@@ -1,7 +1,7 @@
 <?php
 
 include('../../configDb.php');
-$sql = "SELECT id,name FROM branch";
+$sql = "SELECT id,name FROM branch where active = 1";
 $arr = $conn->query($sql);
 $branch_html = "";
 if (isset($_POST['id'])) {
@@ -27,10 +27,10 @@ if (isset($_POST['id'])) {
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form id="frmeditDocument" action="javascript:void(0)" enctype="multipart/form-data">
+                <form id="frmeditDocument"  method="POST">
                     <div class="modal-body">
                         <div class="row pb-2">
-                        <input type="hidden" id="_id" value="' . $row['id'] . '" />
+                        <input type="hidden" name ="_id" id="_id" value="' . $row['id'] . '" />
                             <div class="col-md-12 col-sm-12 col-12">
                                 <label>Bộ môn</label>
                                 <select class="form-control" id="_p_branchList" name="_branch_id">
@@ -53,7 +53,7 @@ if (isset($_POST['id'])) {
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-12">
                                 <label>Ảnh</label><br />
-                                <input type="file" name="_image" id="_image"  value="' . $row['image'] . '"  />
+                                <input type="file" name="file" id="file" />
                             </div>
                         </div>
                         <div class="modal-footer">

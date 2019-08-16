@@ -636,8 +636,10 @@ function saveEditDocument() {
         submitHandler: function () {
             $.ajax({
                 type: 'POST',
+                processData: false,
+                contentType: false,
                 url: '../../../../btlweb/admin/controller/document/saveEditDocument.php',
-                data: { name: name, link: link, branch_id: branch_id, image: image, id: id },
+                data: new FormData($('#frmeditDocument')[0]),
                 success: function (result) {
                     if (result == 1) {
                         swal("Thông báo", "Sửa thành công", "success");
