@@ -9,6 +9,7 @@ if (isset($_POST['id'])) {
         } else {
             echo 0;
         }
+    }
 } else {
     echo 0;
 }

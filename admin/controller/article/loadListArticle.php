@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
         <tr>
             <th>Mã bài báo</th>
             <th>Tiêu đề</th>    
-            <th>Nội dung</th>
+            <th>Cấp đề tài</th>
             <th>Ngày đăng</th>      
             <th></th>
         </tr>

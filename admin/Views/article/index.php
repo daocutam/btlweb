@@ -69,8 +69,8 @@ $arr = $conn->query($sql);
                         </div>
                         <div class="row pb-2">
                             <div class="col-md-12 col-sm-12 col-12">
-                                <label>Nội dung</label>
-                                <textarea class="form-control" id="content" name="content" placeholder="Nội dung"></textarea>
+                                <label>Cấp đề tài</label>
+                                <input class="form-control" id="content" name="content" placeholder="Cấp đề tài" />
                             </div>
                         </div>
                         <div class="row">

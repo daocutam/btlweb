@@ -1,11 +1,11 @@
 <div class="container-fluid" style=" border-bottom:1px solid #0c0fea">
     <div class="container">
         <div class="row">
-            <div class="header" >
+            <div class="header">
                 <img src="http://cse.tlu.edu.vn/cse/assets/images/logo.jpg" alt="">
                 <nav>
                     <ul class="navBar">
-                        <li><a href="#" title="TRANG CHỦ">TRANG CHỦ</a></li>
+                        <li><a href="trangchu.php" title="TRANG CHỦ">TRANG CHỦ</a></li>
                         <li>
                             <a href="#" title="GIỚI THIỆU">GIỚI THIỆU</a>
                             <ul class="sub_menu">
@@ -19,8 +19,6 @@
                             <a href="#" title="NGHIÊN CỨU KHOA HỌC"> KHOA HỌC</a>
                             <ul class="sub_menu">
                                 <li><a href="#" title="Các đề tài, dự án">Các đề tài, dự án</a></li>
-                                <li><a href="#" title="Thông tin Seminar">Thông tin Seminar</a></li>
-                                <li><a href="#" title="Công trình công bố">Công trình công bố</a></li>
                                 <li><a href="#" title="Các phòng nghiệm">Các phòng nghiệm</a></li>
                             </ul>
                         </li>
@@ -31,7 +29,6 @@
                             <ul class="sub_menu">
                                 <li><a href="#" title="Đào tạo đại học">Đào tạo đại học</a></li>
                                 <li><a href="#" title="Đào tạo sau đại học">Đào tạo sau đại học</a></li>
-                                <li><a href="#" title="Chuẩn đầu ra">Chuẩn đầu ra</a></li>
                                 <li><a href="#" title="Định hướng nghành">Định hướng nghành </a></li>
                                 <li><a href="#" title="Mô hình đào tạo">Mô hình đào tạo</a></li>
                                 <li><a href="#" title="Đề cương môn học">Đề cương môn học</a></li>
@@ -53,9 +50,7 @@
                             <a href="#" title="SINH VIÊN">SINH VIÊN</a>
                             <ul class="sub_menu">
                                 <li><a href="#" title="Tài liệu sinh viên">Tài liệu sinh viên</a></li>
-                                <li><a href="#" title="Tổ tư vấn học tập">Tổ tư vấn học tập</a></li>
-                                <li><a href="#" title="Biểu mẫu Đồ án tốt nghiệp">Biểu mẫu DATN</a></li>
-                                <li><a href="#" title="Luận văn tốt nghiệp">Luận văn tốt nghiệp</a></li>
+                                <li><a href="#" title="Biểu mẫu Đồ án tốt nghiệp">Sinh viên tiêu biểu</a></li>
                             </ul>
                         </li>
                         <li>
@@ -65,7 +60,7 @@
                                 <li><a href="#" title="CSE trên báo">CSE trên báo</a></li>
                             </ul>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="#" title="THÔNG BÁO">THÔNG BÁO</a>
                             <ul class="sub_menu">
                                 <li><a href="#" title="Thông báo">Thông báo</a></li>
@@ -75,7 +70,7 @@
                                 <li><a href="#" title="Học bổng">Học bổng</a></li>
                                 <li><a href="#" title="Thông tin khác">Thông tin khác</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li><a href="#" title="LIÊN HỆ">LIÊN HỆ</a></li>
                     </ul>
                 </nav>

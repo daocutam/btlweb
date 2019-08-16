@@ -752,7 +752,7 @@ function loadinfoArticle($id) {
 function deleteArticle($id) {
     $.ajax({
         type: 'POST',
-        url: '../../../../btlweb/admin/controller/article/deleteArticle.php',
+        url: '../../../../../btlweb/admin/controller/article/deleteArticle.php',
         data: { id: $id },
         success: function (result) {
             if (result == 1) {

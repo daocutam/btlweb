@@ -36,7 +36,7 @@ if (isset($_POST['id']) && $_POST['id'] != "") {
                             </div>
                         </div>
                         <div class="row">
-                            <label class="col-md-5 col-sm-5 col-5">Nội dung</label><br />
+                            <label class="col-md-5 col-sm-5 col-5">Cấp đề tài</label><br />
                             <div class="col-md-5 col-sm-5 col-5 text-center">    
                                 <p class="text-center">' . $row['content'] . '</p>
                             </div>
