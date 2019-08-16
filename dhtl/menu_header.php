@@ -9,10 +9,10 @@
                         <li>
                             <a href="#" title="GIỚI THIỆU">GIỚI THIỆU</a>
                             <ul class="sub_menu">
-                                <li><a href="#" title="Logo Khoa CNTT">Logo Khoa CNTT</a></li>
-                                <li><a href="#" title="Lời chào mừng">Lời chào mừng</a></li>
-                                <li><a href="#" title="Tổ chức">Tổ chức</a></li>
-                                <li><a href="#" title="Hợp tác liên kết">Hợp tác liên kết</a></li>
+                                <li><a href="logo_khoa.php" title="Logo Khoa CNTT">Logo Khoa CNTT</a></li>
+                                <li><a href="loi_chao_mung.php" title="Lời chào mừng">Lời chào mừng</a></li>
+                                <li><a href="to_chuc.php" title="Tổ chức">Tổ chức</a></li>
+                                <li><a href="hop_tac_lien_ket.php" title="Hợp tác liên kết">Hợp tác liên kết</a></li>
                             </ul>
                         </li>
                         <li>
