@@ -212,7 +212,7 @@ body{
 #carouselExampleIndicators img{
 	height: 480px;
 }
-<<<<<<< HEAD
+
 .main_logo{
 	background-color: #012f7c;
 	height: 30px;
@@ -256,7 +256,6 @@ body{
 	margin-left: 80px;
 	text-decoration: underline;
 }
-=======
 
 .table thead{
 	color: black !important;
@@ -265,4 +264,4 @@ body{
 .table tbody tr td, .table tbody th td {
 	white-space:normal !important;
 }
->>>>>>> 8e9f5ff24c546d306ae708635647df39a8f6fe01
+
