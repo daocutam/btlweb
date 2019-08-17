@@ -23,6 +23,9 @@ function createBranch() {
             address: {
                 required: true
             },
+            link: {
+                required: true
+            },
             introduct: {
                 required: true,
             }
@@ -41,6 +44,9 @@ function createBranch() {
                 email: "email phải đúng định dạng"
             },
             address: {
+                required: "Vui lòng không để trống"
+            },
+            link: {
                 required: "Vui lòng không để trống"
             },
             introduct: {
@@ -102,6 +108,7 @@ function resetTextBranch() {
     $('#mail').val("");
     $('#address').val("");
     $('#introduct').val("");
+    $('#link').val("");
 }
 
 //Show ra popup Sửa ngành

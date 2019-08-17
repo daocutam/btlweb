@@ -51,6 +51,12 @@ if (isset($_POST['id'])) {
                                 <input value="' . $created . '" type="text" class="form-control date" name="_date" id="_date" placeholder="Ngày tạo">
                             </div>
                         </div>
+                        <div class="row pb-4">
+                            <div class="col-md-12 col-sm-12 col-12">
+                                <label>link</label>
+                                <input value="' . $row['link'] . '" type="text" class="form-control" name="_link" id="_link" placeholder="">
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-12">
                                 <label>Giới thiệu</label>

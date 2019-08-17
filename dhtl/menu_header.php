@@ -1,3 +1,9 @@
+<?php
+include('../../btlweb/admin/configDb.php');
+$query = "Select id,name,link from branch where active = 1";
+$lst_branch = $conn->query($query);
+?>
+
 <div class="container-fluid" style=" border-bottom:1px solid #0c0fea">
     <div class="container">
         <div class="row">
@@ -18,7 +24,7 @@
                         <li>
                             <a href="#" title="NGHIÊN CỨU KHOA HỌC"> KHOA HỌC</a>
                             <ul class="sub_menu">
-                                <li><a href="#" title="Các đề tài, dự án">Các đề tài, dự án</a></li>
+                                <li><a href="de_tai_du_an.php" title="Các đề tài, dự án">Các đề tài, dự án</a></li>
                                 <li><a href="#" title="Các phòng nghiệm">Các phòng nghiệm</a></li>
                             </ul>
                         </li>
@@ -37,13 +43,13 @@
                         <li>
                             <a href="#" title="BỘ MÔN - TRUNG TÂM">BỘ MÔN</a>
                             <ul class="sub_menu">
-                                <li><a href="#" title="Công nghệ phần mềm">Công nghệ PM</a></li>
-                                <li><a href="#" title="Hệ thống thông tin">Hệ thống thông tin</a></li>
-                                <li><a href="#" title="Khoa học máy tính">Khoa học máy tính</a></li>
-                                <li><a href="#" title="Toán học">Toán học</a></li>
-                                <li><a href="#" title="Trung tâm tin học">Trung tâm tin học</a></li>
-                                <li><a href="#" title="Kỹ thuật máy tính">Kỹ thuật máy tính</a></li>
-                                <li><a href="#" title="Kỹ thuật mạng">Kỹ thuật mạng</a></li>
+                                <?php
+                                if ($lst_branch->num_rows > 0) {
+                                    foreach ($lst_branch as $row) {
+                                        echo '<li><a href="' . $row['link'] . '?id=' . $row['id'] . '" title="' . $row['name'] . '">' . $row['name'] . '</a></li>';
+                                    }
+                                }
+                                ?>
                             </ul>
                         </li>
                         <li>
