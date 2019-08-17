@@ -27,22 +27,22 @@
                                 ĐÀO TẠO
                             </a>
                             <ul class="sub_menu">
-                                <li><a href="dao_tao_dai_hoc.php" title="Đào tạo đại học">Đào tạo đại học</a></li>
-                                <li><a href="http://cse.tlu.edu.vn/Portals/0/CNTT_CTDT_ThS_2017_1.pdf" title="Đào tạo sau đại học">Đào tạo sau đại học</a></li>
-                                <li><a href="dinh_huong_nghanh_nghe.php" title="Định hướng nghành">Định hướng nghành </a></li>
-                                <li><a href="mo_hinh_dao_tao.php" title="Mô hình đào tạo">Mô hình đào tạo</a></li>
-                                <li><a href="https://drive.google.com/drive/folders/1UjDhyuFX4QPot-EbwGdUsglqXUOrxHmu?fbclid=IwAR3sv2Tj4QZlfYo_LN0F4l0NoAiMSDsy7Oh7kNraXyR8CE3anxswO3-j1cw" title="Đề cương môn học">Đề cương môn học</a></li>
+                                <li><a href="#" title="Đào tạo đại học">Đào tạo đại học</a></li>
+                                <li><a href="#" title="Đào tạo sau đại học">Đào tạo sau đại học</a></li>
+                                <li><a href="#" title="Định hướng nghành">Định hướng nghành </a></li>
+                                <li><a href="#" title="Mô hình đào tạo">Mô hình đào tạo</a></li>
+                                <li><a href="#" title="Đề cương môn học">Đề cương môn học</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#" title="BỘ MÔN - TRUNG TÂM">BỘ MÔN</a>
                             <ul class="sub_menu">
-                                <li><a href="CN_phan_mem.php" title="Công nghệ phần mềm">Công nghệ PM</a></li>
-                                <li><a href="hh_thong_tin.php" title="Hệ thống thông tin">Hệ thống thông tin</a></li>
-                                <li><a href="kh_may_tinh.php" title="Khoa học máy tính">Khoa học máy tính</a></li>
+                                <li><a href="#" title="Công nghệ phần mềm">Công nghệ PM</a></li>
+                                <li><a href="#" title="Hệ thống thông tin">Hệ thống thông tin</a></li>
+                                <li><a href="#" title="Khoa học máy tính">Khoa học máy tính</a></li>
                                 <li><a href="#" title="Toán học">Toán học</a></li>
-                                <li><a href="tin_hoc.php" title="Trung tâm tin học">Trung tâm tin học</a></li>
-                                <li><a href="kt_may_tinh.php" title="Kỹ thuật máy tính">Kỹ thuật máy tính</a></li>
+                                <li><a href="#" title="Trung tâm tin học">Trung tâm tin học</a></li>
+                                <li><a href="#" title="Kỹ thuật máy tính">Kỹ thuật máy tính</a></li>
                                 <li><a href="#" title="Kỹ thuật mạng">Kỹ thuật mạng</a></li>
                             </ul>
                         </li>

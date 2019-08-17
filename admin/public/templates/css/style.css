@@ -335,36 +335,3 @@ body{
 	margin-left: 20px;
 	font-size: 18px;
 }
-.dinhHuong h1{
-	margin:40px 0px;
-}
-.dinhHuong p, i{
-	font-size: 20px;
-}
-.dinhHuong img{
-	width: 1070px;
-	margin-top: 40px;
-}
-.moHinhDaoTao{
-	margin-top: 40px;
-	font-size: 20px;
-}
-.moHinhDaoTao b{
-	color: #cc0011;
-}
-.cnPhanMem{
-	font-size: 18px;
-	margin-top: 40px;
-}
-.cnPhanMem table{
-	text-align: center;
-}
-.cnPhanMem tr{
-	text-align: center;
-}
-.hhThongTin img{
-	width: 100px;
-}
-.ktMayTinh img{
-	width: 100px;
-}
