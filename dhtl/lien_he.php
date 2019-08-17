@@ -14,7 +14,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="../admin/public/templates/js/bootstrap.min.js"></script>
 	<script src="../admin/public/templates/js/aos.js"></script>
-	<title>Logo của Khoa</title>
+	<title>Liên Hệ</title>
 </head>
 
 <body>
@@ -25,36 +25,45 @@
 	<!-- Header_Menu -->
 	<?php include('menu_header.php'); ?>
 	<!-- End Header_Menu -->
-
-	<!-- Main -->
-	<section class="container main_logo">
-		<section class="row">
-			<section class="menu_main_logo">
-				<a href="">Giới Thiệu</a>
-				<img src="http://cse.tlu.edu.vn/Portals/_default/Skins/Xcillion/Images/breadcrumb-arrow.png" alt="">
-				<a href="">Logo của Khoa</a>
-			</section>
-		</section>
-	</section>
+	
+	<!-- MAIN -->
 	<section class="container">
 		<section class="row">
-			<section class="logo">
-				<h1>Logo của Khoa</h1>
-				<div class="logo_img">
-					<img src="http://cse.tlu.edu.vn/Portals/0/CSE%20logo.jpg" alt="">
-					<img src="http://cse.tlu.edu.vn/Portals/0/CSE%20logo%20blue.jpg" alt="">
+			<div class="col-md-6 lienHe">
+				<h1>THÔNG TIN LIÊN HỆ</h1>
+				<div class="lienHe_left">
+					<img src="http://cse.tlu.edu.vn/portals/0/2017/1_files/icon_home.png" alt="">
+					<div class="lienHe_content">
+						<b>Địa Chỉ</b>
+						<p>Tầng 2 nhà C1, 175 Tây Sơn, Đống Đa, Hà Nội</p>
+					</div>
 				</div>
-			</section>
+				<div class="lienHe_left">
+					<img src="http://cse.tlu.edu.vn/portals/0/2017/1_files/icon_phone.png" alt="">
+					<div class="lienHe_content">
+						<b>Điện Thoại</b>
+						<p>(04) 35632211</p>
+					</div>
+				</div>
+				<div class="lienHe_left">
+					<img src="http://cse.tlu.edu.vn/portals/0/2017/1_files/icon_mail.png" alt="">
+					<div class="lienHe_content">
+						<b>Email:</b>
+						<p> vpkcntt@tlu.edu.vn</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 lienHe">
+				<h1>BẢN ĐỒ</h1>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2214.693488417469!2d105.82438294462638!3d21.006436957978778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac8109765ba5%3A0xd84740ece05680ee!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBUaOG7p3kgTOG7o2k!5e0!3m2!1svi!2s!4v1566011768885!5m2!1svi!2s" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
 		</section>
 	</section>
-	<!-- End Main -->
+	<!-- End Main  -->
 
 	<!-- Footer -->
 	<?php include('footer.php'); ?>
 	<!-- End Footer -->
-	<script>
-		AOS.init();
-	</script>
 </body>
 
 </html>

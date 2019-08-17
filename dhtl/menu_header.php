@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include('../../btlweb/admin/configDb.php');
 $query = "Select id,name,link from branch where active = 1";
 $lst_branch = $conn->query($query);
@@ -13,7 +13,7 @@ $lst_branch = $conn->query($query);
                     <ul class="navBar">
                         <li><a href="trangchu.php" title="TRANG CHỦ">TRANG CHỦ</a></li>
                         <li>
-                            <a href="#" title="GIỚI THIỆU">GIỚI THIỆU</a>
+                            <a href="gioi_thieu.php" title="GIỚI THIỆU">GIỚI THIỆU</a>
                             <ul class="sub_menu">
                                 <li><a href="logo_khoa.php" title="Logo Khoa CNTT">Logo Khoa CNTT</a></li>
                                 <li><a href="loi_chao_mung.php" title="Lời chào mừng">Lời chào mừng</a></li>
@@ -22,14 +22,16 @@ $lst_branch = $conn->query($query);
                             </ul>
                         </li>
                         <li>
-                            <a href="#" title="NGHIÊN CỨU KHOA HỌC"> KHOA HỌC</a>
+                            <a href="khoa_hoc.php" title="NGHIÊN CỨU KHOA HỌC"> KHOA HỌC</a>
                             <ul class="sub_menu">
                                 <li><a href="de_tai_du_an.php" title="Các đề tài, dự án">Các đề tài, dự án</a></li>
                                 <li><a href="#" title="Các phòng nghiệm">Các phòng nghiệm</a></li>
+                                <li><a href="#" title="Các đề tài, dự án">Các đề tài, dự án</a></li>
+                                <li><a href="phong_thi_nghiem.php" title="Các phòng nghiệm">Các phòng nghiệm</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" title="ĐÀO TẠO">
+                            <a href="dao_tao.php" title="ĐÀO TẠO">
                                 ĐÀO TẠO
                             </a>
                             <ul class="sub_menu">
@@ -53,31 +55,31 @@ $lst_branch = $conn->query($query);
                             </ul>
                         </li>
                         <li>
-                            <a href="#" title="SINH VIÊN">SINH VIÊN</a>
+                            <a href="sinh_vien.php" title="SINH VIÊN">SINH VIÊN</a>
                             <ul class="sub_menu">
                                 <li><a href="#" title="Tài liệu sinh viên">Tài liệu sinh viên</a></li>
                                 <li><a href="#" title="Biểu mẫu Đồ án tốt nghiệp">Sinh viên tiêu biểu</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" title="TIN TỨC">TIN TỨC</a>
+                            <a href="tin_tuc.php" title="TIN TỨC">TIN TỨC</a>
                             <ul class="sub_menu">
                                 <li><a href="#" title="Sự kiện">Sự kiện</a></li>
                                 <li><a href="#" title="CSE trên báo">CSE trên báo</a></li>
                             </ul>
                         </li>
                         <!-- <li>
-                            <a href="#" title="THÔNG BÁO">THÔNG BÁO</a>
-                            <ul class="sub_menu">
+                            <a href="#" title="THÔNG BÁO">THÔNG BÁO</a> -->
+                            <!-- <ul class="sub_menu">
                                 <li><a href="#" title="Thông báo">Thông báo</a></li>
                                 <li><a href="#" title="Thông báo đào tạo">Thông báo đào tạo</a></li>
                                 <li><a href="#" title="Nghiên cứu khoa học">Nghiên cứu KH</a></li>
                                 <li><a href="#" title="Tuyển dụng">Tuyển dụng</a></li>
                                 <li><a href="#" title="Học bổng">Học bổng</a></li>
                                 <li><a href="#" title="Thông tin khác">Thông tin khác</a></li>
-                            </ul>
-                        </li> -->
-                        <li><a href="#" title="LIÊN HỆ">LIÊN HỆ</a></li>
+                            </ul> -->
+                        <!-- </li> -->
+                        <li><a href="lien_he.php" title="LIÊN HỆ">LIÊN HỆ</a></li>
                     </ul>
                 </nav>
             </div>
