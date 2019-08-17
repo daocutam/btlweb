@@ -14,7 +14,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="../admin/public/templates/js/bootstrap.min.js"></script>
 	<script src="../admin/public/templates/js/aos.js"></script>
-	<title>Logo của Khoa</title>
+	<title>Khoa công nghệ thông tin</title>
 </head>
 
 <body>
@@ -26,35 +26,27 @@
 	<?php include('menu_header.php'); ?>
 	<!-- End Header_Menu -->
 
-	<!-- Main -->
-	<section class="container main_logo">
+	<!-- Carousel -->
+	<?php include('slider.php'); ?>
+	<!-- End Carousel -->
+	
+	<!-- MAIN -->
+	<section class="container phong_thi_nghiem" >
 		<section class="row">
-			<section class="menu_main_logo">
-				<a href="">Giới Thiệu</a>
-				<img src="http://cse.tlu.edu.vn/Portals/_default/Skins/Xcillion/Images/breadcrumb-arrow.png" alt="">
-				<a href="">Logo của Khoa</a>
-			</section>
+			<h1>Danh sách các phòng thí nghiệm của Khoa</h1>  <br>
+			<p>
+				- Phòng thí nghiệm Khoa học dữ liệu: <b>TS. Đặng Thị Thu Hiền</b> - Trưởng Lab <br>
+				- Phòng thí nghiệm Mô hình hóa và mô phỏng: <b>TS. Nguyễn Ngọc Doanh </b>- Trưởng Lab <br>
+				- Phòng thí nghiệm Hệ thống mạng: <b>TS. Phạm Tuấn Minh</b> - Trưởng Lab
+			</p>
 		</section>
 	</section>
-	<section class="container">
-		<section class="row">
-			<section class="logo">
-				<h1>Logo của Khoa</h1>
-				<div class="logo_img">
-					<img src="http://cse.tlu.edu.vn/Portals/0/CSE%20logo.jpg" alt="">
-					<img src="http://cse.tlu.edu.vn/Portals/0/CSE%20logo%20blue.jpg" alt="">
-				</div>
-			</section>
-		</section>
-	</section>
-	<!-- End Main -->
+	<!-- End Main  -->
 
 	<!-- Footer -->
 	<?php include('footer.php'); ?>
 	<!-- End Footer -->
-	<script>
-		AOS.init();
-	</script>
+
 </body>
 
 </html>
