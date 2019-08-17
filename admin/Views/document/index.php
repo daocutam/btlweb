@@ -22,6 +22,7 @@ $arr = $conn->query($sql);
         </div>
         <div class="col-md-5 offset-md-0 col-sm-5 mt-1">
             <select class="form-control" id="_branchListDoc">
+                <option value="0">Đề cương môn học</option>';
                 <?php foreach ($arr as $val) {
                     echo '<option value="' . $val['id'] . '">' . $val['name'] . '</option>';
                 } ?>
@@ -52,8 +53,9 @@ $arr = $conn->query($sql);
                     <div class="modal-body">
                         <div class="row pb-2">
                             <div class="col-md-12 col-sm-12 col-12">
-                                <label>Bộ môn</label>
+                                <label>Chủ đề</label>
                                 <select class="form-control" id="p_branchList" name="branch_id">
+                                    <option value="0">Đề cương môn học</option>
                                     <?php foreach ($arr as $val) {
                                         echo '<option value="' . $val['id'] . '">' . $val['name'] . '</option>';
                                     } ?>

@@ -5,7 +5,7 @@
                 <nav class="sidebar-nav">
                     <ul class="main-menu metismenu" id="metismenu">
                         <li id="tabHome">
-                            <a><i class="fa fa-tachometer ic-menu"></i>Trang chủ</a>
+                            <a href="../../../btlweb/dhtl/trangchu.php"><i class="fa fa-tachometer ic-menu"></i>Trang chủ</a>
                         </li>
                         <li id="tabBranch">
                             <a href="javascript:void()" onclick="redirectBranch();"><i class="fa fa-recycle"></i>Bộ môn</a>

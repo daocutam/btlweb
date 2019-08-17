@@ -25,8 +25,6 @@ $lst_branch = $conn->query($query);
                             <a href="khoa_hoc.php" title="NGHIÊN CỨU KHOA HỌC"> KHOA HỌC</a>
                             <ul class="sub_menu">
                                 <li><a href="de_tai_du_an.php" title="Các đề tài, dự án">Các đề tài, dự án</a></li>
-                                <li><a href="#" title="Các phòng nghiệm">Các phòng nghiệm</a></li>
-                                <li><a href="#" title="Các đề tài, dự án">Các đề tài, dự án</a></li>
                                 <li><a href="phong_thi_nghiem.php" title="Các phòng nghiệm">Các phòng nghiệm</a></li>
                             </ul>
                         </li>
@@ -57,20 +55,21 @@ $lst_branch = $conn->query($query);
                         <li>
                             <a href="sinh_vien.php" title="SINH VIÊN">SINH VIÊN</a>
                             <ul class="sub_menu">
-                                <li><a href="#" title="Tài liệu sinh viên">Tài liệu sinh viên</a></li>
+                                <li><a href="de_cuong_mon_hoc.php" title="Đề cương môn học">Đề cương môn học</a></li>
+                                <li><a href="tai_lieu_tham_khao.php" title="Tài liệu sinh viên">Tài liệu tham khảo</a></li>
                                 <li><a href="#" title="Biểu mẫu Đồ án tốt nghiệp">Sinh viên tiêu biểu</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="tin_tuc.php" title="TIN TỨC">TIN TỨC</a>
                             <ul class="sub_menu">
-                                <li><a href="#" title="Sự kiện">Sự kiện</a></li>
+                                <li><a href="su_kien.php" title="Sự kiện">Sự kiện</a></li>
                                 <li><a href="#" title="CSE trên báo">CSE trên báo</a></li>
                             </ul>
                         </li>
                         <!-- <li>
                             <a href="#" title="THÔNG BÁO">THÔNG BÁO</a> -->
-                            <!-- <ul class="sub_menu">
+                        <!-- <ul class="sub_menu">
                                 <li><a href="#" title="Thông báo">Thông báo</a></li>
                                 <li><a href="#" title="Thông báo đào tạo">Thông báo đào tạo</a></li>
                                 <li><a href="#" title="Nghiên cứu khoa học">Nghiên cứu KH</a></li>

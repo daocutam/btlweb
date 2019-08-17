@@ -10,11 +10,19 @@ if (isset($_POST['id'])) {
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        foreach ($arr as $val) {
-            if ($val['id'] == $row['branch_id']) {
-                $branch_html .= '<option value="' . $val['id'] . '"  selected >' . $val['name'] . '</option>';
-            } else {
+        if ($row['branch_id'] == 0) {
+            $branch_html .= '<option value="0"  selected >Đề cương môn học</option>';
+            foreach ($arr as $val) {
                 $branch_html .= '<option value="' . $val['id'] . '">' . $val['name'] . '</option>';
+            }
+        } else {
+            $branch_html .= '<option value="0">Đề cương môn học</option>';
+            foreach ($arr as $val) {
+                if ($val['id'] == $row['branch_id']) {
+                    $branch_html .= '<option value="' . $val['id'] . '"  selected >' . $val['name'] . '</option>';
+                } else {
+                    $branch_html .= '<option value="' . $val['id'] . '">' . $val['name'] . '</option>';
+                }
             }
         }
         ob_start();
@@ -32,7 +40,7 @@ if (isset($_POST['id'])) {
                         <div class="row pb-2">
                         <input type="hidden" name ="_id" id="_id" value="' . $row['id'] . '" />
                             <div class="col-md-12 col-sm-12 col-12">
-                                <label>Bộ môn</label>
+                                <label>Chủ đề</label>
                                 <select class="form-control" id="_p_branchList" name="_branch_id">
                                     ' . $branch_html . '
                                 </select>

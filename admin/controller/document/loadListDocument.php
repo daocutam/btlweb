@@ -4,7 +4,7 @@ $sql = "SELECT * FROM document where active = 1";
 if (isset($_POST['name']) && $_POST['name'] != "") {
     $sql = $sql . " && name LIKE '%" . $_POST['name'] . "%'";
 }
-if (isset($_POST['branch_id']) && $_POST['branch_id']) {
+if (isset($_POST['branch_id'])) {
     $sql = $sql . " && branch_id = '" . $_POST['branch_id'] . "'";
 }
 //chua xong
