@@ -71,6 +71,12 @@
                                 <input type="text" class="form-control date" name="date" id="date" placeholder="Ngày tạo">
                             </div>
                         </div>
+                        <div class="row pb-4">
+                            <div class="col-md-12 col-sm-12 col-12">
+                                <label>link</label>
+                                <input type="text" class="form-control" name="link" id="link" placeholder="link">
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-12">
                                 <label>Giới thiệu</label>

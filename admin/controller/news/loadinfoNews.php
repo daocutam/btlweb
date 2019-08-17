@@ -10,11 +10,27 @@ if (isset($_POST['id'])) {
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        foreach ($arr as $val) {
-            if ($val['id'] == $row['branch_id']) {
-                $branch_html .= '<option value="' . $val['id'] . '"  selected >' . $val['name'] . '</option>';
-            } else {
+        if ($row['branch_id'] == -1) {
+            $branch_html .= '<option value="-1"  selected >Tin tức chung</option>';
+            $branch_html .= '<option value="0">Sự kiện khoa</option>';
+            foreach ($arr as $val) {
                 $branch_html .= '<option value="' . $val['id'] . '">' . $val['name'] . '</option>';
+            }
+        } else if ($row['branch_id'] == 0) {
+            $branch_html .= '<option value="0"  selected >Sự kiện khoa</option>';
+            $branch_html .= '<option value="-1">Tin tức chung</option>';
+            foreach ($arr as $val) {
+                $branch_html .= '<option value="' . $val['id'] . '">' . $val['name'] . '</option>';
+            }
+        } else {
+            $branch_html .= '<option value = "-1">Tin tức chung</option>';
+            $branch_html .= '<option value = "0">Sự kiện khoa</option>';
+            foreach ($arr as $val) {
+                if ($val['id'] == $row['branch_id']) {
+                    $branch_html .= '<option value="' . $val['id'] . '"  selected >' . $val['name'] . '</option>';
+                } else {
+                    $branch_html .= '<option value="' . $val['id'] . '">' . $val['name'] . '</option>';
+                }
             }
         }
         ob_start();
@@ -32,7 +48,7 @@ if (isset($_POST['id'])) {
                         <div class="row pb-2">
                             <div class="col-md-12 col-sm-12 col-12">
                                 <input type="hidden" name="_id" value="' . $row['id'] . '" />
-                                <label>Bộ môn</label>
+                                <label>Chủ đề tin</label>
                                 <select class="form-control" id="_p_branchList" name="_branch_id">
                                     ' . $branch_html . '
                                 </select>

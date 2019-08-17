@@ -16,6 +16,14 @@
 	<script src="../admin/public/templates/js/aos.js"></script>
 	<title>Khoa công nghệ thông tin</title>
 </head>
+<?php
+include('../../btlweb/admin/configDb.php');
+//Select các tin tức event
+$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = 0 limit 0,3";
+$lst_event = $conn->query($query);
+$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = -1 limit 0,4";
+$lst_news_active = $conn->query($query);
+?>
 
 <body>
 	<!-- Header top -->
@@ -34,26 +42,17 @@
 	</section>
 	<section class="container">
 		<section class="row">
-			<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-right">
-				<a href=""><img src="http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg" alt=""></a>
-				<a href="">Hội thảo "Sử dụng mạng xã hội an toàn - góc nhìn từ tiêu chuẩn cộng đồng facebook"</a>
-				<i>02 tháng 08, 2019</i>
-			</div>
-			<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-up">
-				<a href=""><img src="http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg" alt=""></a>
-				<a href="">"Xét kết quả nghiên cứu khoa học của sinh viên toàn quốc lần thứ 32 . . . . "</a>
-				<i>02 tháng 08, 2019</i>
-			</div>
-			<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-down">
-				<a href=""><img src="http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg" alt=""></a>
-				<a href="">Thông báo tuyển sinh đào tạo trình độ thạc sĩ đợt 1 năm 2019 của trường Thủy Lợi</a>
-				<i>02 tháng 08, 2019</i>
-			</div>
-			<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-left">
-				<a href=""><img src="http://cse.tlu.edu.vn/Portals/0/2016/Kieu%20Tuan%20Dung.jpg" alt=""></a>
-				<a href="">Hội thảo "Sử dụng mạng xã hội an toàn - góc nhìn từ tiêu chuẩn cộng đồng facebook"</a>
-				<i>02 tháng 08, 2019</i>
-			</div>
+			<?php
+			if ($lst_news_active->num_rows > 0) {
+				foreach ($lst_news_active as $row) {
+					echo '<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-right">
+						<a href=""><img src="../../btlweb/admin/Images/' . $row['path'] . '" alt=""></a>
+						<a href="">' . $row['title'] . '</a>
+						<i>' . $row['created'] . '</i>
+					</div>';
+				}
+			}
+			?>
 		</section>
 		<section class="row">
 			<div class="col-md-12 col-xs-12 main_row2">
@@ -62,34 +61,20 @@
 		</section>
 		<section class="row">
 			<div class="col-md-8 col-xs-6 main_row3">
-				<div class="main_row3_1" data-aos="fade-down" data-aos-duration="4500">
-					<img src="http://www.tlu.edu.vn/Portals/0/2018/Thang11/3_2.jpg" alt="">
-					<div class="main_row3_right">
-						<a href=""><b>3 trong 4 sinh viên Trường Đại học Thủy lợi đạt giải tại Olympic Tin học toàn quốc là tân sinh viên Khóa 60</b></a>
-						<a href=""><i>Xem Thêm...</i></a>
-					</div>
-
-				</div>
-				<div class="main_row3_1" data-aos="fade-up" data-aos-duration="4000">
-					<img src="http://www.tlu.edu.vn/Portals/0/2018/Thang11/TH_2.jpg" alt="">
-					<div class="main_row3_right">
-						<a href=""><b>Đội tuyển Olympic Tin học toàn quốc ra quân (TLU) <br>
-								“Với thời gian ôn luyện gấp rút trong 2 tháng cùng việc xét chọn kỹ lưỡng qua các bài kiểm tra, đội tuyển Olympic Tin học ...</b></a>
-						<a href=""><i>Xem Thêm...</i></a>
-					</div>
-
-				</div>
-				<div class="main_row3_1" data-aos="fade-up" data-aos-duration="5500">
-					<img src="http://www.tlu.edu.vn/Portals/0/2018/Thang11/C.jpg" alt="">
-					<div class="main_row3_right">
-						<a href=""><b>Công bố Quyết định thành lập Đảng bộ bộ phận Công nghệ thông tin <br>
-								(TLU) – Sáng ngày 15/11, tại P225/A2 diễn ra lễ công bố ...</b></a>
-						<a href=""><i>Xem Thêm...</i></a>
-					</div>
-
-				</div>
+				<?php
+				if ($lst_event->num_rows > 0) {
+					foreach ($lst_event as $row) {
+						echo '<div class="main_row3_1" data-aos="fade-down" data-aos-duration="4500">
+								<img src="../../btlweb/admin/Images/' . $row['path'] . '" alt="">
+								<div class="main_row3_right">
+								<a href=""><b>' . $row['title'] . '</b></a>
+								<a href=""><i>Xem Thêm...</i></a>
+								</div>
+							</div>';
+					}
+				}
+				?>
 			</div>
-
 			<div class="col-md-4 col-xs-6 main_row3">
 				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcse.tlu.edu.vn%2F&tabs&width=292&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="292" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 			</div>
