@@ -267,9 +267,14 @@ body{
 .table tbody tr td, .table tbody th td {
 	white-space:normal !important;
 }
-
+.table td{
+	vertical-align: inherit;
+}
+.table-sm a{
+	float: left;
+}
 .tochuc{
-	font-size: 18px;
+	font-size: 20px;
 }
 .tochuc_li img{
 	width: 300px;
@@ -278,7 +283,6 @@ body{
 }
 .tochuc a{
 	color: black;
-	float: right;
 	text-decoration: underline;
 }
 .khoaHoc{

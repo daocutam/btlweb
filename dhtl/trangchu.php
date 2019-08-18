@@ -45,7 +45,7 @@ $lst_news_active = $conn->query($query);
 			<?php
 			if ($lst_news_active->num_rows > 0) {
 				foreach ($lst_news_active as $row) {
-					echo '<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-right">
+					echo '<div class="col-md-4 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-left ">
 						<a href=""><img src="../../btlweb/admin/Images/' . $row['path'] . '" alt=""></a>
 						<a href="">' . $row['title'] . '</a>
 						<i>' . $row['created'] . '</i>
