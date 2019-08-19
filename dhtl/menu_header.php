@@ -56,14 +56,13 @@ $lst_branch = $conn->query($query);
                             <ul class="sub_menu">
                                 <li><a href="de_cuong_mon_hoc.php" title="Đề cương môn học">Đề cương môn học</a></li>
                                 <li><a href="tai_lieu_tham_khao.php" title="Tài liệu sinh viên">Tài liệu tham khảo</a></li>
-                                <li><a href="sv_tieu_bieu.php" title="Biểu mẫu Đồ án tốt nghiệp">Sinh viên tiêu biểu</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="tin_tuc.php" title="TIN TỨC">TIN TỨC</a>
                             <ul class="sub_menu">
                                 <li><a href="su_kien.php" title="Sự kiện">Sự kiện</a></li>
-                                <li><a href="#" title="CSE trên báo">CSE trên báo</a></li>
+                                <li><a href="cse_tren_bao.php" title="CSE trên báo">CSE trên báo</a></li>
                             </ul>
                         </li>
                         <!-- <li>
