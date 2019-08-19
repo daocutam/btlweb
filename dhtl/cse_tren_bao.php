@@ -25,7 +25,7 @@
 	<!-- Header_Menu -->
 	<?php include('menu_header.php'); ?>
 	<!-- End Header_Menu -->
-	
+
 	<!-- Carousel -->
 	<?php include('slider.php'); ?>
 	<!-- End Carousel -->
@@ -52,7 +52,8 @@
 					“Giữ vững thương hiệu của mình từ kết quả chất lượng đào tạo thực tế và tạo được niềm tin đối với người học qua từng bài giảng, đẩy mạnh nghiên cứu khoa học và chú trọng công bố quốc tế, chương trình đào tạo đáp ứng yêu cầu doanh nghiệp, Khoa CNTT đã thành công trong mấy mùa tuyển sinh gần đây” – TS Tùng cho biết./. <br>
 					<a href="http://www.baomoi.com/khoa-cntt-dh-thuy-loi-gay-choang-vang-voi-ho-so-ky-luc/c/20195441.epi">http://www.baomoi.com/khoa-cntt-dh-thuy-loi-gay-choang-vang-voi-ho-so-ky-luc/c/20195441.epi</a>
 				</p>
-				
+
+			</section>
 		</section>
 	</section>
 	<!-- End Main -->

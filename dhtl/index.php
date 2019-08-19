@@ -47,10 +47,10 @@ $lst_news_active = $conn->query($query);
 			<?php
 			if ($lst_news_active->num_rows > 0) {
 				foreach ($lst_news_active as $row) {
-					echo '<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-right">
-						<a href="chi_tiet_tin_tuc.php?id=' . $row['id'] . '"><img src="../../btlweb/admin/Images/' . $row['path'] . '" alt=""></a>
-						<a href="chi_tiet_tin_tuc.php?id=' . $row['id'] . '">' . $row['title'] . '</a>
-					echo '<div class="col-md-4 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-left ">
+					// echo '<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-right">
+					// 	<a href="chi_tiet_tin_tuc.php?id=' . $row['id'] . '"><img src="../../btlweb/admin/Images/' . $row['path'] . '" alt=""></a>
+					// 	<a href="chi_tiet_tin_tuc.php?id=' . $row['id'] . '">' . $row['title'] . '</a>';
+					echo '<div class="col-md-4 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-left">
 						<a href=""><img src="../../btlweb/admin/Images/' . $row['path'] . '" alt=""></a>
 						<a href="">' . $row['title'] . '</a>
 						<i>' . $row['created'] . '</i>

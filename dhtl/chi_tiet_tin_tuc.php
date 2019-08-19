@@ -58,10 +58,10 @@ if (isset($_GET['id'])) {
             </section>
         </section>
         <!-- End Main -->
-
-        <!-- Footer -->
-        <?php include('footer.php'); ?>
-        <!-- End Footer -->
+    </section>
+    <!-- Footer -->
+    <?php include('footer.php'); ?>
+    <!-- End Footer -->
 </body>
 
 </html>
