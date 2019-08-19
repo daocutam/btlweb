@@ -47,7 +47,7 @@ $result = $conn->query($query);
         <section class="row">
             <section class="tochuc">
                 <h1>Danh sách các nguồn tài liệu môn học</h1>
-                <table class="table table-bordered table-sm mt-5">
+                <table class="table table-bordered table-sm mt-5" cellspacing="0" border="3px;">
                     <thead>
                         <th class="text-center">STT</th>
                         <th class="text-center">Tên tài liệu</th>
@@ -71,7 +71,7 @@ $result = $conn->query($query);
                         ?>
                     </tbody>
                 </table>
-                <a href=""> <i>Trở về đầu trang</i></a>
+                <a href="" style="float: right;"> <i>Trở về đầu trang</i></a>
             </section>
         </section>
     </section>
