@@ -1,6 +1,10 @@
 <?php
 
 include('../../configDb.php');
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 if (isset($_POST['_link']) &&  isset($_POST['_name']) && isset($_POST['_phone']) && isset($_POST['_mail']) && isset($_POST['_address']) && isset($_POST['_date']) && isset($_POST['_introduct']) && isset($_POST['_id'])) {
     $id = $_POST['_id'];
     $name = $_POST['_name'];

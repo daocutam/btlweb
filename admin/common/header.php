@@ -11,7 +11,9 @@
             <div class="user-account float-right">
                 <div class="dropdown">
                     <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown">
-                        <strong class="text-danger" id="userNameLogin"></strong>
+                        <strong class="text-danger" id="userNameLogin"><?php if (isset($_SESSION['user'])) {
+                                                                            echo $_SESSION['user'];
+                                                                        } ?></strong>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right account">
                         <li data-toggle="modal" data-target="#changePassword"><a href="#"><i class="fa fa-user-o"></i>Đổi mật khẩu</a></li>

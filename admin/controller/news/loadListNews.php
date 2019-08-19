@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 include('../../configDb.php');
 //type = 1 tin tức
 //type =2 Bài báo khoa học

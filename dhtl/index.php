@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php session_start();
+?>
 
 <head>
 	<meta charset="utf-8">
@@ -19,9 +21,9 @@
 <?php
 include('../../btlweb/admin/configDb.php');
 //Select các tin tức event
-$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = 0 limit 0,3";
+$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = 0 Order By RAND() Limit 0,4";
 $lst_event = $conn->query($query);
-$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = -1 limit 0,4";
+$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = -1 Order By RAND() Limit 0,4";
 $lst_news_active = $conn->query($query);
 ?>
 
@@ -46,8 +48,8 @@ $lst_news_active = $conn->query($query);
 			if ($lst_news_active->num_rows > 0) {
 				foreach ($lst_news_active as $row) {
 					echo '<div class="col-md-3 col-xs-12 aos-init aos-animate main_row1" data-aos="fade-right">
-						<a href=""><img src="../../btlweb/admin/Images/' . $row['path'] . '" alt=""></a>
-						<a href="">' . $row['title'] . '</a>
+						<a href="chi_tiet_tin_tuc.php?id=' . $row['id'] . '"><img src="../../btlweb/admin/Images/' . $row['path'] . '" alt=""></a>
+						<a href="chi_tiet_tin_tuc.php?id=' . $row['id'] . '">' . $row['title'] . '</a>
 						<i>' . $row['created'] . '</i>
 					</div>';
 				}
@@ -67,8 +69,8 @@ $lst_news_active = $conn->query($query);
 						echo '<div class="main_row3_1" data-aos="fade-down" data-aos-duration="4500">
 								<img src="../../btlweb/admin/Images/' . $row['path'] . '" alt="">
 								<div class="main_row3_right">
-								<a href=""><b>' . $row['title'] . '</b></a>
-								<a href=""><i>Xem Thêm...</i></a>
+								<a href="chi_tiet_tin_tuc.php?id=' . $row['id'] . '"><b>' . $row['title'] . '</b></a>
+								<a href="chi_tiet_tin_tuc.php?id=' . $row['id'] . '"><i>Xem Thêm...</i></a>
 								</div>
 							</div>';
 					}

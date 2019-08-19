@@ -23,6 +23,8 @@ if (isset($_GET['id'])) {
     $query = "SELECT * FROM branch WHERE active = 1 && id = " . $_GET['id'] . "";
     $obj = $conn->query($query);
     $branch = $obj->fetch_assoc();
+    $query = "SELECT * FROM lecturers,image WHERE lecturers.id = image.lecturer_id && lecturers.active = 1 && lecturers.branch_id = " . $_GET['id'] . "";
+    $lst_lect = $conn->query($query);
 }
 
 ?>
@@ -53,6 +55,15 @@ if (isset($_GET['id'])) {
                 <p>
                     <?php echo $branch['introduct']; ?>
                 </p>
+                <label>Danh sách giảng viên thuộc bộ môn:</label>
+                <?php
+                if ($lst_lect->num_rows > 0) {
+                    foreach ($lst_lect as $row) {
+                        echo '<div class="row mb-5"><div class="col-md-3"><img width="120" height="150"  src="../../btlweb/admin/Images/' . $row['path'] . '" alt=""></div>';
+                        echo '<div class ="col-md-9">"' . $row['introduct'] . '"</div></div>';
+                    }
+                }
+                ?>
                 <label>Địa chỉ:</label>
                 <p><?php echo $branch['address'] ?></p>
                 <label>Email</label>

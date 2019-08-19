@@ -1,5 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
+?>
 
 <head>
     <meta charset="utf-8">

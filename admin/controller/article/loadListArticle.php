@@ -2,6 +2,10 @@
 include('../../configDb.php');
 //type = 1 tin tức
 //type =2 Bài báo khoa học
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 $sql = "SELECT * FROM news where active = 1 && type = 2";
 if (isset($_POST['title']) && $_POST['title'] != "") {
     $sql = $sql . " && title LIKE '%" . $_POST['title'] . "%'";

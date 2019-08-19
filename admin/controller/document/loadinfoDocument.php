@@ -1,6 +1,10 @@
 <?php
 
 include('../../configDb.php');
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 $sql = "SELECT id,name FROM branch where active = 1";
 $arr = $conn->query($sql);
 $branch_html = "";

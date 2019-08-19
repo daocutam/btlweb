@@ -1,5 +1,9 @@
 <?php
 include('../../configDb.php');
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 if (isset($_POST['id'])) {
     $sql = "UPDATE document SET active = 0 WHERE id ='" . $_POST['id'] . "'";
     if ($conn->query($sql) == TRUE) {

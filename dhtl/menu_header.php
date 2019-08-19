@@ -11,7 +11,7 @@ $lst_branch = $conn->query($query);
                 <img src="http://cse.tlu.edu.vn/cse/assets/images/logo.jpg" alt="">
                 <nav>
                     <ul class="navBar">
-                        <li><a href="trangchu.php" title="TRANG CHỦ">TRANG CHỦ</a></li>
+                        <li><a href="index.php" title="TRANG CHỦ">TRANG CHỦ</a></li>
                         <li>
                             <a href="gioi_thieu.php" title="GIỚI THIỆU">GIỚI THIỆU</a>
                             <ul class="sub_menu">
@@ -26,18 +26,6 @@ $lst_branch = $conn->query($query);
                             <ul class="sub_menu">
                                 <li><a href="de_tai_du_an.php" title="Các đề tài, dự án">Các đề tài, dự án</a></li>
                                 <li><a href="phong_thi_nghiem.php" title="Các phòng nghiệm">Các phòng nghiệm</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="dao_tao.php" title="ĐÀO TẠO">
-                                ĐÀO TẠO
-                            </a>
-                            <ul class="sub_menu">
-                                <li><a href="#" title="Đào tạo đại học">Đào tạo đại học</a></li>
-                                <li><a href="#" title="Đào tạo sau đại học">Đào tạo sau đại học</a></li>
-                                <li><a href="#" title="Định hướng nghành">Định hướng nghành </a></li>
-                                <li><a href="#" title="Mô hình đào tạo">Mô hình đào tạo</a></li>
-                                <li><a href="#" title="Đề cương môn học">Đề cương môn học</a></li>
                             </ul>
                         </li>
                         <li>

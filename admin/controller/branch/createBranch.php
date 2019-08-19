@@ -1,6 +1,9 @@
 <?php
 include('../../configDb.php');
-
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 if (isset($_POST['link']) && isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['mail']) && isset($_POST['address']) && isset($_POST['date']) && isset($_POST['introduct'])) {
     $query = "SELECT MAX(id) as id FROM branch WHERE active=1";
     $row_max_id = $conn->query($query)->fetch_assoc();

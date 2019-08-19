@@ -1,6 +1,6 @@
 $(document).ready(function () {
     loadListBranch();
-    $('.date').datepicker();
+    // $('.date').datepicker();
 });
 
 //Tạo Giảng Viên
@@ -1002,4 +1002,20 @@ function redirectAccount() {
             loadListAccount();
         }
     });
+}
+
+function login() {
+    var user = $('#user').val();
+    var pass = $('#pass').val();
+    if (user === "" || pass === "") {
+        $(".error").html('Mời nhập đầy đủ thông tin!');
+    }
+    else {
+        if (pass.length > 20) {
+            $(".error").html('Mật khẩu phải dưới 20 kí tự!');
+        }
+        else {
+            $('#frmSign_in').submit();
+        }
+    }
 }

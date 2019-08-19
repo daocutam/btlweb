@@ -1,5 +1,9 @@
 <?php
 include('../../configDb.php');
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 if (isset($_FILES['file'])) {
     $file_name = $_FILES['file']['name'];
     $file_type = $_FILES['file']['type'];

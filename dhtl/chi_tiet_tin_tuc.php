@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+include('../../btlweb/admin/configDb.php');
+if (isset($_GET['id'])) {
+    $query = "SELECT * FROM news,image WHERE news.id=image.new_id && active = 1 && news.id = " . $_GET['id'] . "";
+    $obj = $conn->query($query);
+    $news = $obj->fetch_assoc();
+}
+?>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,15 +23,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="../admin/public/templates/js/bootstrap.min.js"></script>
     <script src="../admin/public/templates/js/aos.js"></script>
-    <title>Tin tức</title>
+    <title><?php echo $news['title']; ?></title>
 </head>
-
-<?php
-include('../../btlweb/admin/configDb.php');
-$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = 0 ORDER BY RAND() LIMIT 0,5";
-$result = $conn->query($query);
-
-?>
 
 <body>
     <!-- Header top -->
@@ -33,45 +35,33 @@ $result = $conn->query($query);
     <?php include('menu_header.php'); ?>
     <!-- End Header_Menu -->
 
+    <!-- Carousel -->
+    <?php include('slider.php'); ?>
+    <!-- End Carousel -->
+
     <!-- Main -->
     <section class="container main_logo">
         <section class="row">
             <section class="menu_main_logo">
-                <a href>Tin tức</a>
+                <a href="">Trang chủ</a>
+                <img src="http://cse.tlu.edu.vn/Portals/_default/Skins/Xcillion/Images/breadcrumb-arrow.png" alt="">
+                <a href="">Tin tức</a>
             </section>
         </section>
     </section>
     <section class="container">
-        <section class="row">
-            <section class="tochuc">
-                <?php
-                if ($result->num_rows > 0) {
-                    foreach ($result as $row) {
-                        echo '<div class="row mt-3">
-                                <div class="col-md-3">
-                                <img src="../../btlweb/admin/Images/' . $row['path'] . '" alt="" width="200" height="180">
-                                </div>
-                                <div class="col-md-9">
-                                <div class="row">
-                                <a href=""><b>' . $row['title'] . '</b></a><br/>
-                                </div>
-                                <div class="row">
-                                <a href=""><i>Xem Thêm...</i></a>
-                                </div>
-								</div>
-							</div>';
-                    }
-                }
-                ?>
-                <a href=""> <i>Trở về đầu trang</i></a>
+        <section class="row mt-3">
+            <section class="chao_mung">
+                <h1><?php echo $news['title']; ?></h1>
+                <img width="800" height="500" src="../../btlweb/admin/Images/<?php echo $news['path']; ?>" />
+                <p class="mt-5"><?php echo $news['content']; ?></p>
             </section>
         </section>
-    </section>
-    <!-- End Main -->
+        <!-- End Main -->
 
-    <!-- Footer -->
-    <?php include('footer.php'); ?>
-    <!-- End Footer -->
+        <!-- Footer -->
+        <?php include('footer.php'); ?>
+        <!-- End Footer -->
 </body>
 
 </html>

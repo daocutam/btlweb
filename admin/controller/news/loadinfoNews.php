@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 include('../../configDb.php');
 $sql = "SELECT id,name FROM branch";
 $arr = $conn->query($sql);

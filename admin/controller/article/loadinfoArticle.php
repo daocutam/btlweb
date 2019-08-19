@@ -1,5 +1,9 @@
 <?php
 include('../../configDb.php');
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 if (isset($_POST['id']) && $_POST['id'] != "") {
     $_strLect;
     $lect = $conn->query("select id,name from lecturers where active = 1");

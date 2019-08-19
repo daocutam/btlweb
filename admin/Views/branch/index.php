@@ -1,3 +1,8 @@
+<?php
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
+?>
 <div class="" id="View">
     <div class="col-md-12">
         <div class="breadcrumb-holder">

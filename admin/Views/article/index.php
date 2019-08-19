@@ -1,5 +1,8 @@
 <?php
 include("../../configDb.php");
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 $sql = "SELECT id,name FROM lecturers";
 $arr = $conn->query($sql);
 ?>

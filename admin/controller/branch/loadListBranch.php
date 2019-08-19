@@ -1,5 +1,9 @@
 <?php
 include('../../configDb.php');
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 $sql = "SELECT * FROM branch where active = 1";
 if (isset($_POST['name']) && $_POST['name'] != "") {
     $sql = $sql . " && name LIKE '%" . $_POST['name'] . "%'";

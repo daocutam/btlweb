@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header('Location:http://localhost/btlweb/dhtl/login.php');
+}
 include('../../configDb.php');
 if (isset($_POST['id'])) {
     $sql = "UPDATE News SET active = 0 WHERE id ='" . $_POST['id'] . "'";
