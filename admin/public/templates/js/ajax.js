@@ -1019,3 +1019,36 @@ function login() {
         }
     }
 }
+
+function signUp() {
+    var user = $('#_user').val();
+    var pass = $('#_pass').val();
+    var email = $('#_email').val();
+    if (user === "" || pass === "") {
+        $(".error").html('Mời nhập đầy đủ thông tin!');
+    }
+    else {
+        if (pass.length > 20) {
+            $(".error").html('Mật khẩu phải dưới 20 kí tự!');
+        }
+        else {
+            $.ajax({
+                type: 'POST',
+                url: '../../../../btlweb/dhtl/login.php',
+                data: {
+                    _user: user,
+                    _pass: pass,
+                    _email: email,
+                },
+                success: function (result) {
+                    if (result == 1) {
+                        $('.error').html('Tạo mới tài khoản thành công!');
+                    }
+                    else {
+                        $('.error').html('Lỗi!');
+                    }
+                }
+            });
+        }
+    }
+}

@@ -12,6 +12,13 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
         header('Location:http://localhost/btlweb/admin/');
     }
 }
+if (isset($_POST['_user']) && isset($_POST['_pass'])) {
+    $name = $_POST['_user'];
+    $email = $_POST['_email'];
+    $pass = $_POST['_pass'];
+    $sql = "INSERT INTO account (name,pass,email,active,created)
+    VALUES ('$name','$pass' , '$email', 1,date('Y-m-d H:i:s'))";
+}
 ?>
 <link href="../../../btlweb/admin/public/templates/css/bootstrap.min.css" rel="stylesheet">
 <link href="../../../btlweb/admin/public/templates/css/font-awesome.min.css" rel="stylesheet">
@@ -40,7 +47,7 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
                     <button class="button" onclick="login();">Sign In</button>
                 </div>
                 <div class="group text-right">
-                    <a href="trangchu.php" style="color:#fff;margin:5px 5px 0 0;"><i class="fa fa-backward"></i> Quay lại trang chủ</a>
+                    <a href="index.php" style="color:#fff;margin:5px 5px 0 0;"><i class="fa fa-backward"></i> Quay lại trang chủ</a>
                 </div>
                 <div class="group pt-3 text-center">
                     <span class="error text-white"></span>
@@ -49,11 +56,11 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
             <div class="sign-up-htm">
                 <form id="frmSign_up">
                     <div class="group">
-                        <label for="user" class="label">Username</label>
+                        <label class="label">Username</label>
                         <input id="_user" name="_user" type="text" class="input">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Password</label>
+                        <label class="label">Password</label>
                         <input id="_pass" name="_pass" type="password" class="input" data-type="password">
                     </div>
                     <div class="group">
@@ -62,10 +69,13 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
                     </div>
                 </form>
                 <div class="group">
-                    <button class="button">Sign Up</button>
+                    <button class="button" onclick="signUp();">Sign Up</button>
                 </div>
                 <div class="group text-right">
-                    <a href="trangchu.php" style="color:#fff;margin:5px 5px 0 0;"><i class="fa fa-backward"></i> Quay lại trang chủ</a>
+                    <a href="index.php" style="color:#fff;margin:5px 5px 0 0;"><i class="fa fa-backward"></i> Quay lại trang chủ</a>
+                </div>
+                <div class="group pt-3 text-center">
+                    <span class="error text-white"></span>
                 </div>
             </div>
         </div>

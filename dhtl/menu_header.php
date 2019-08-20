@@ -33,8 +33,8 @@ $lst_branch = $conn->query($query);
                                 ĐÀO TẠO
                             </a>
                             <ul class="sub_menu">
-                                <li><a href="dao_tao_dai_hoc.php" title="Đào tạo đại học">Đào tạo đại học</a></li>
-                                <li><a href="http://cse.tlu.edu.vn/Portals/0/CNTT_CTDT_ThS_2017_1.pdf" title="Đào tạo sau đại học">Đào tạo sau đại học</a></li>
+                                <!-- <li><a href="dao_tao_dai_hoc.php" title="Đào tạo đại học">Đào tạo đại học</a></li>
+                                <li><a href="http://cse.tlu.edu.vn/Portals/0/CNTT_CTDT_ThS_2017_1.pdf" title="Đào tạo sau đại học">Đào tạo sau đại học</a></li> -->
                                 <li><a href="dinh_huong_nghanh_nghe.php" title="Định hướng nghành">Định hướng nghành </a></li>
                                 <li><a href="mo_hinh_dao_tao.php" title="Mô hình đào tạo">Mô hình đào tạo</a></li>
                             </ul>

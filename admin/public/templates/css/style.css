@@ -12,9 +12,14 @@ body{
 }
 .header_top{
 	display: flex ;
-	padding-left: 150px;
+	padding-left: 20px;
 	line-height: 17px;
 }
+
+.list-top{
+	margin-left: 500px;
+}
+
 .list-top ul,a{
 	display: flex;
 	color: white;

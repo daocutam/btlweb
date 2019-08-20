@@ -55,10 +55,10 @@ $result = $conn->query($query);
                                 </div>
                                 <div class="col-md-9">
                                 <div class="row">
-                                <a href=""><b>' . $row['title'] . '</b></a><br/>
+                                <a href="chi_tiet_tin_tuc.php?id=' . $row['id'] . '"><b>' . $row['title'] . '</b></a><br/>
                                 </div>
                                 <div class="row">
-                                <a href=""><i>Xem Thêm...</i></a>
+                                <a href="chi_tiet_tin_tuc.php?id=' . $row['id'] . '"><i>Xem Thêm...</i></a>
                                 </div>
 								</div>
 							</div>';

@@ -21,9 +21,9 @@
 <?php
 include('../../btlweb/admin/configDb.php');
 //Select các tin tức event
-$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = 0 Order By RAND() Limit 0,4";
+$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = 0 Limit 4";
 $lst_event = $conn->query($query);
-$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = -1 Order By RAND() Limit 0,4";
+$query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.type = 1 && news.branch_id = -1  Limit 4";
 $lst_news_active = $conn->query($query);
 ?>
 

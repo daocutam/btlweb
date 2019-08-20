@@ -4,7 +4,7 @@
 <?php
 include('../../btlweb/admin/configDb.php');
 if (isset($_GET['id'])) {
-    $query = "SELECT * FROM news,image WHERE news.id=image.new_id && active = 1 && news.id = " . $_GET['id'] . "";
+    $query = "SELECT * FROM news,image WHERE news.id=image.new_id && news.active = 1 && news.id = " . $_GET['id'] . "";
     $obj = $conn->query($query);
     $news = $obj->fetch_assoc();
 }
